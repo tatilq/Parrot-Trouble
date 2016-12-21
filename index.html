@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,29 +11,56 @@
 <body>
 	<div class="container">
 		<div class="row">
-			<div class="col-md-8 col-md-offset-2 text-center">
+			<div class="col-md-8 col-md-offset-2">
 				<h1>Parrot Trouble</h1>
+				<p>Completa el formulario</p>
 				<hr>
 			</div>
 		</div>
 		<div class="row">
 			<div class="col-md-5 col-md-offset-2">
 				<div class="form-group">
-					<label for="exampleInputEmail1">¿El mono A sonrie?</label>
-					<input type="email" class="form-control" id="a_Smile" placeholder="">
+					<label for="dia">¿Qué hora es?</label>
+					<select class="form-control" id="hora">
+						<option value="0">12:00 AM</option>
+						<option value="1">1:00 AM</option>
+						<option value="2">2:00 AM</option>
+						<option value="3">3:00 AM</option>
+						<option value="4">4:00 AM</option>
+						<option value="5">5:00 AM</option>
+						<option value="6">6:00 AM</option>
+						<option value="7">7:00 AM</option>
+						<option value="8">8:00 AM</option>
+						<option value="9">9:00 AM</option>
+						<option value="10">10:00 AM</option>
+						<option value="11">11:00 AM</option>
+						<option value="12">12:00 PM</option>
+						<option value="13">13:00 PM</option>
+						<option value="14">14:00 PM</option>
+						<option value="15">15:00 PM</option>
+						<option value="16">16:00 PM</option>
+						<option value="17">17:00 PM</option>
+						<option value="18">18:00 PM</option>
+						<option value="19">19:00 PM</option>
+						<option value="20">20:00 PM</option>
+						<option value="21">21:00 PM</option>
+						<option value="22">22:00 PM</option>
+						<option value="23">23:00 PM</option>
+
+					</select>
 				</div>
 				<div class="form-group">
-					<label for="exampleInputPassword1">¿El mono B sonrie?</label>
-					<input class="form-control" id="b_Smile" placeholder="">
+					<label for="vacaciones">¿El loro esta hablando?</label>
+					<select class="form-control" id="talking">
+						<option value="1">Si</option>
+						<option value="2">No</option>
+					</select>
 				</div>
-				<button onclick="Mostrar()" class="btn btn-default">Calcular</button>
+				<button onclick="calcular()" class="btn btn-primary">Evaluar</button>
 			</div>
 			<div class="col-md-3 text-center">
-				<h4 >Mensaje</h4>
-				<div id="salida" style="font-size:40px;" class="text-center">--</div>
-				<div id="mensajes" style="font-size:25px;" class="text-center"></div>
-			</div>
-		</div>
+				<h4 class="text-info">Mensaje</h4>
+				<div id="salida" style="font-size:50px;" class="text-center">--</div>
 	</div>
 </body>
 <script src="main.js"></script>
