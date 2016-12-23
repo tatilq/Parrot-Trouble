@@ -1,36 +1,43 @@
 
-var aSmile = document.getElementById("a_Smile");
-var bSmile = document.getElementById("b_Smile");
-var divSalida = document.getElementById("salida");
-
-
-function Mostrar()
+function calcular()
 {
-	var  valoraSmile=aSmile.value;
-	var  valorbSmile=bSmile.value;
+	var talking = document.getElementById("talking").value;
+	var hora = parseInt(document.getElementById("hora").value);
 
-	if(valoraSmile == "" || valorbSmile == "" )
+	var isTalking = true;
+
+	var salida = document.getElementById("salida");
+
+	if(talking == "1")
 	{
-
-		salida.innerHTML = "--";
-		document.getElementById("mensajes").innerHTML = '<div class="alert alert-danger">Responde todas las preguntas</div>';
+		isTalking = true;
+		//loro habla
 	}
-	else if(valoraSmile !="si" && valoraSmile != "no" || valorbSmile != "si" && valorbSmile != "no" )
+	if(talking == "2")
 	{
-
-		salida.innerHTML = "--";
-		document.getElementById("mensajes").innerHTML = '<div class="alert alert-danger">Valores Incorrectos</div>';
+		isTalking = false;
+		//loro no habla
 	}
-	else if(valoraSmile == "si" && valorbSmile == "si" || valoraSmile == "no" && valorbSmile == "no" )
+	if(isTalking)
 	{
-
-		salida.innerHTML = "1";
-		document.getElementById("mensajes").innerHTML = '<div class="alert alert-danger">Estamos en Problemas</div>';
-	}	
-	else 
+		if(hora < 7 || hora>20 )
+		{
+			//estamos en problemas
+			salida.innerHTML = "1";
+		}
+		else
+		{
+			//no estamos en problemas
+			salida.innerHTML = "0";
+		}
+	}
+	if(!isTalking)
 	{
-		salida.innerHTML = "0";
-		document.getElementById("mensajes").innerHTML = '<div class="alert">No hay Problemas</div>';
+		if(hora <= 23 )
+		{
+			//no estamos en problemas
+			salida.innerHTML = "0";
+		}
 
 	}
 
