@@ -12,11 +12,13 @@ function calcular()
 	{
 		isTalking = true;
 		//loro habla
+		
 	}
 	if(talking == "2")
 	{
 		isTalking = false;
 		//loro no habla
+		
 	}
 	if(isTalking)
 	{
@@ -24,11 +26,17 @@ function calcular()
 		{
 			//estamos en problemas
 			salida.innerHTML = "1";
+		
+		document.getElementById("mensajes").innerHTML = '<div class="alert_num alert-danger"><p>Estamos en Problemas</p></div>';
+	
 		}
 		else
 		{
 			//no estamos en problemas
 			salida.innerHTML = "0";
+
+		document.getElementById("mensajes").innerHTML = '<div class="alert alert-danger"><p>No Estamos en Problemas</p></div>';
+	
 		}
 	}
 	if(!isTalking)
@@ -37,6 +45,9 @@ function calcular()
 		{
 			//no estamos en problemas
 			salida.innerHTML = "0";
+
+		document.getElementById("mensajes").innerHTML = '<div class="alert alert-danger"><p>No Estamos en Problemas</p></div>';
+	
 		}
 
 	}
